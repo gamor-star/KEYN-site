@@ -501,3 +501,35 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .phone-front, .phone-back, .check-bar span, .ans-correct, .mtile.on { animation: none; }
   .btn:hover, .flow-step:hover, .ch-card:hover, .slab:hover, .buyer-grid article:hover { transform: none; }
 }
+
+/* ── Feedback form (support page) ─────────────────────────────────────── */
+.feedback { margin: 2.4rem 0 2.8rem; }
+.feedback-form { display: grid; gap: 1.05rem; max-width: 560px; margin-top: 1.1rem; }
+.feedback-form .field { display: grid; gap: 0.42rem; }
+.feedback-form label {
+  font-family: var(--sans); font-size: 0.92rem; font-weight: 600; color: var(--ink-soft);
+}
+.feedback-form label .opt { color: var(--ink-faint); font-weight: 500; }
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  font-family: var(--sans); font-size: 1rem; color: var(--ink); width: 100%;
+  background: var(--paper); border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm); padding: 0.78rem 0.95rem;
+  -webkit-appearance: none; appearance: none; transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.feedback-form textarea { resize: vertical; min-height: 128px; line-height: 1.55; }
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  outline: none; border-color: var(--indigo); box-shadow: 0 0 0 3px var(--indigo-tint);
+}
+.feedback-form .btn { justify-self: start; cursor: pointer; border: none; }
+.feedback-form .btn:disabled { opacity: 0.55; cursor: default; transform: none; box-shadow: none; }
+/* Spam honeypot — visually hidden, off-screen, skipped by tab/AT. */
+.feedback-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-note {
+  font-family: var(--sans); font-size: 0.92rem; margin: 0.1rem 0 0; min-height: 1.2em; color: var(--ink-soft);
+}
+.form-note.ok { color: var(--green); font-weight: 600; }
+.form-note.err { color: var(--gold-2); font-weight: 600; }
